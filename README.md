@@ -1,23 +1,23 @@
 ## Hardhat smart contract testing/deployment setup ##
 
-To develop in a docker container, execute the following command:
+To test/deploy in a docker container, git clone the repo and step inside of the root directory
 
-Build:
+To Build:
 ```
 docker build . -t <tag>
 ```
 
-Run and initiated a node:
+To Run and initiated a node:
 ```
 docker run -it -d -p 8545:8545 --name <name> <tag>
 ```
 
-Deploy contracts:
+To Deploy contracts:
 ```
 docker exec -it <name> yarn docker_deploy:local
 ```
 
-Interact with the deployed contract(will use the first wallet address in the list given by hardhat):
+To Interact with the deployed contract(will use the first wallet address in the list given by hardhat):
 ```
 docker exec -it hard_hat node client/signer.js
 ```
