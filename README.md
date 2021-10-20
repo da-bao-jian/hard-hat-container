@@ -1,4 +1,4 @@
-## Hardhat smart contract testing/deployment setup ##
+## Hardhat smart contract testing/deployment setup dockerized ##
 
 To test/deploy in a docker container, git clone the repo and step inside of the root directory
 
