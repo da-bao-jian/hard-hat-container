@@ -9,6 +9,7 @@ docker build . -t <tag>
 
 To Run and initiated a node:
 ```
+// run interactively in detached mode with a published port on 8545
 docker run -it -d -p 8545:8545 --name <name> <tag>
 ```
 
