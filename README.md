@@ -1,6 +1,6 @@
 ## Hardhat smart contract testing/deployment setup dockerized ##
 
-To test/deploy in a docker container, git clone the repo and step inside of the root directory
+To test/deploy smart contract in a docker container, git clone the repo and step inside of the root directory
 
 To Build:
 ```
@@ -23,7 +23,7 @@ To Interact with the deployed contract(will use the first wallet address in the 
 docker exec -it <name> node client/signer.js
 ```
 
-To run slither:
+To run [slither](https://github.com/crytic/slither):
 ```
 docker exec -it <name> slither contracts/
 ```
