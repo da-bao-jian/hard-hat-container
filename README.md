@@ -1,15 +1,27 @@
-# Basic Sample Hardhat Project
+## Hardhat smart contract testing/deployment setup dockerized ##
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+To test/deploy in a docker container, git clone the repo and step inside of the root directory
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+To Build:
 ```
+docker build . -t <tag>
+```
+
+To Run and initiated a node:
+```
+// run interactively in detached mode with a published port on 8545
+docker run -it -d -p 8545:8545 --name <name> <tag>
+```
+
+To Deploy contracts:
+```
+docker exec -it <name> yarn docker_deploy:local
+```
+
+To Interact with the deployed contract(will use the first wallet address in the list given by hardhat):
+```
+docker exec -it hard_hat node client/signer.js
+```
+
+*For better dev experience, use [VSCode Remote Containers](https://code.visualstudio.com/docs/remote/containers-tutorial) plug-in
+
