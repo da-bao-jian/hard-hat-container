@@ -20,7 +20,12 @@ docker exec -it <name> yarn docker_deploy:local
 
 To Interact with the deployed contract(will use the first wallet address in the list given by hardhat):
 ```
-docker exec -it hard_hat node client/signer.js
+docker exec -it <name> node client/signer.js
+```
+
+To run slither:
+```
+docker exec -it <name> slither contracts/
 ```
 
 *For better dev experience, use [VSCode Remote Containers](https://code.visualstudio.com/docs/remote/containers-tutorial) plug-in
