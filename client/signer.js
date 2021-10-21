@@ -2,6 +2,7 @@ const ethers = require('ethers');
 const abi = require('../artifacts/contracts/Greeter.sol/Greeter.json').abi;
 const address = require('../address.json');
 
+debugger
 const provider = ethers.getDefaultProvider('http://localhost:8545');
 // const provider = new ethers.ethers.providers.JsonRpcProvider();
 const signer = provider.getSigner(address.walletAddress || 'UNKNOWN_WALLET_ADDRESS');
